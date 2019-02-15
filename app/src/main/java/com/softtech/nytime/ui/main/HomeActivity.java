@@ -1,4 +1,4 @@
-package com.softtech.nytime.ui;
+package com.softtech.nytime.ui.main;
 
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
@@ -6,18 +6,20 @@ import android.support.v4.app.Fragment;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
-import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.SearchView;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
-
 import com.softtech.nytime.R;
+import com.softtech.nytime.ui.BaseActivity;
 
 import timber.log.Timber;
-
+/**
+ * MaxiBilgi
+ * Created by SoftTech Garage on 15.02.2019.
+ */
 public class HomeActivity
-        extends AppCompatActivity {
+        extends BaseActivity {
 
     public static final String TAG_HOME_FRAGMENT = "home";
 
@@ -39,7 +41,6 @@ public class HomeActivity
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
-
         init();
         listeners();
 

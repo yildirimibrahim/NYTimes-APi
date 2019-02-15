@@ -37,7 +37,7 @@
         android:layout_toRightOf="@+id/ivItem"
         android:layout_toLeftOf="@+id/ivArrow"
         android:maxLines="2"
-        tools:text="By Gokhan Turedi "
+        tools:text="By SoftTech"
         />
 
     <LinearLayout

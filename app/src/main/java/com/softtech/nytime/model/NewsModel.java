@@ -1,5 +1,6 @@
 package com.softtech.nytime.model;
 
+import com.google.gson.annotations.SerializedName;
 import com.softtech.nytime.core.utils.NYTimesUtils;
 
 import java.io.Serializable;
@@ -14,6 +15,10 @@ public class NewsModel
     public String title;
     public String byline;
     public String published_date;
+    public String source;
+    @SerializedName("abstract")
+    public String abs_abstract;
+
     public List<MediaModel> media;
 
     public String getImageUrl() {

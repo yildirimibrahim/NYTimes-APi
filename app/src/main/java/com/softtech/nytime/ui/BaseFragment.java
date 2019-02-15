@@ -7,11 +7,13 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-
 import com.softtech.nytime.R;
-
 import timber.log.Timber;
 
+/**
+ * MaxiBilgi
+ * Created by SoftTech Garage on 15.02.2019.
+ */
 public class BaseFragment
         extends Fragment {
 

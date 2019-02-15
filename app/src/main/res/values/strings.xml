@@ -7,10 +7,11 @@
     <string name="nav_header_subtitle">android.studio@android.com</string>
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">Settings</string>
-    <string name="aboutText">made by\nsofttech\nandroid team\n2019</string>
+    <string name="aboutText">made by\nsofttech\nandroid team\n NYTimes APi List 2019</string>
     <string name="loading">loading..</string>
     <string name="errorTitle">error</string>
     <string name="errorPossitiveButton">try again</string>
     <string name="errorNegativeButton">close</string>
     <string name="errorMessage">an error happened during loading news</string>
+    <string name="open_url">Open URL News</string>
 </resources>

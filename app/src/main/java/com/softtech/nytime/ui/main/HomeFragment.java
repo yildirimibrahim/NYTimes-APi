@@ -1,4 +1,4 @@
-package com.softtech.nytime.ui;
+package com.softtech.nytime.ui.main;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -8,16 +8,20 @@ import android.support.v7.app.AlertDialog;
 import android.support.v7.widget.RecyclerView;
 
 import com.softtech.nytime.R;
-import com.softtech.nytime.core.utils.NYTimesUtils;
 import com.softtech.nytime.core.webservices.NewsService;
 import com.softtech.nytime.model.NewsResponseModel;
+import com.softtech.nytime.ui.BaseFragment;
+import com.softtech.nytime.ui.detail.DetailsActivity;
+import com.softtech.nytime.ui.adapter.NewsAdapter;
 
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 import timber.log.Timber;
-
-
+/**
+ * MaxiBilgi
+ * Created by SoftTech Garage on 15.02.2019.
+ */
 public class HomeFragment
         extends BaseFragment {
 
@@ -53,10 +57,9 @@ public class HomeFragment
             public void onResponse(Call<NewsResponseModel> call, Response<NewsResponseModel> response) {
                 dismissProgress();
                 adapter = new NewsAdapter(response.body().results, (row, item) -> {
-                    Intent intent = NYTimesUtils.openBrowser(item.url);
-                    if (intent != null) {
-                        startActivity(intent);
-                    }
+                    Intent intent = new Intent(getActivity(), DetailsActivity.class);
+                    intent.putExtra("item", item);
+                    startActivity(intent);
                 });
                 rvItems.setAdapter(adapter);
             }

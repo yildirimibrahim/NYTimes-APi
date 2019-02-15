@@ -1,4 +1,4 @@
-package com.softtech.nytime.ui;
+package com.softtech.nytime.ui.adapter;
 
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
@@ -17,10 +17,14 @@ import com.softtech.nytime.model.NewsModel;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * MaxiBilgi
+ * Created by SoftTech Garage on 15.02.2019.
+ */
 public class NewsAdapter
         extends RecyclerView.Adapter<NewsAdapter.NewsViewHolder> {
 
-    public static final int MIN_SEARCH_LEN = 3;
+    public static final int MIN_SEARCH_LEN = 1;
 
     protected final List<NewsModel> items;
     protected final List<NewsModel> allItems;
