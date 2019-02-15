@@ -1,0 +1,77 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="@dimen/marginNormal"
+    >
+
+    <ImageView
+        android:id="@+id/ivItem"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        tools:src="@drawable/image_place_holder"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="@dimen/marginSmall"
+        />
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:maxLines="2"
+        android:layout_toRightOf="@+id/ivItem"
+        android:layout_toLeftOf="@+id/ivArrow"
+        tools:text="A Princess Vanishes. A Video Offers Alarming Clues."
+        />
+
+    <TextView
+        android:id="@+id/tvAuthor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/marginXSmall"
+        android:textColor="@color/colorSubtext"
+        android:layout_below="@+id/tvTitle"
+        android:layout_toRightOf="@+id/ivItem"
+        android:layout_toLeftOf="@+id/ivArrow"
+        android:maxLines="2"
+        tools:text="By Gokhan Turedi "
+        />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@+id/tvAuthor"
+        android:layout_toLeftOf="@+id/ivArrow"
+        >
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/ic_date_range_black_24dp"
+            android:layout_marginRight="@dimen/marginXSmall"
+            />
+
+        <TextView
+            android:id="@+id/tvDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorSubtext"
+            tools:text="2019-02-15"
+            />
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/ivArrow"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/ic_chevron_right_black_24dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        />
+
+</RelativeLayout>
